@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TPMS</title>
+    <!-- <link rel="stylesheet" href="css/tailwind.css"> -->
+    <link rel="stylesheet" href="./css/output.css">
+</head>
+
+<body>
+    <div class="flex">
+        <div class="w-1/2">
+            <img src="https://cdn.pixabay.com/photo/2019/03/28/22/23/link-4088190_1280.png" alt="image" class="h-64 w-full object-cover">
+        </div>
+        <div class="w-1/2 p-4">
+            <div class="w-1/2 p-4">
+                <button class="bg-red-500 hover:bg-indigo-600 text-white font-bold py-2 px-4 rounded" id="bogo">Faculties</button>
+                <button class="bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-2 px-4 rounded mt-4">Societies</button>
+                <form class="hidden mt-4" id="form">
+                    <div class="mb-4">
+                        <label class="block text-gray-700 font-bold mb-2" for="email">
+                            Email
+                        </label>
+                        <input class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-indigo-500" id="email" type="email" placeholder="Email">
+                    </div>
+                    <div class="mb-4">
+                        <label class="block text-gray-700 font-bold mb-2" for="password">
+                            Password
+                        </label>
+                        <input class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-indigo-500" id="password" type="password" placeholder="Password">
+                    </div>
+                    <button class="bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-2 px-4 rounded">
+                        Login
+                    </button>
+                </form>
+            </div>
+
+        </div>
+    </div>
+    <script>
+        const formSection = document.getElementById('form-section');
+        const facultiesButton = document.querySelector('button:first-child');
+
+        facultiesButton.addEventListener('click', () => {
+            formSection.classList.toggle('hidden');
+        });
+    </script>
+</body>
+
+</html>
