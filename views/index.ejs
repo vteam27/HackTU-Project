@@ -1,57 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href=" ./css/output.css">
-    <title>Document</title>
-</head>
-<!-- "./images/thap1.jpg" -->
-<body>
-    <div class="bg-gradient-to-r from-red-600 via-white-200 to-red-400 p-4">
-<div class="flex items-center justify-center h-screen">
-    <div class="w-3/5 bg-white shadow-lg rounded-lg overflow-hidden">
-        <div class="flex w-full h-[500px]">
-            <img src="./images/thap1.jpg" alt="Card Image" class="w-3/5">
+    <link rel="stylesheet" href=" ./css/output.css" />
+    <title>TPMS</title>
+  </head>
+  <!-- "./images/thap1.jpg" -->
+  <body>
+    <div
+      class="bg-gradient-to-r from bg-blue-500 via-white-200 to-blue-400 p-4"
+    >
+      <div class="flex items-center justify-center h-screen">
+        <div class="w-3/5 bg-white shadow-lg rounded-lg overflow-hidden">
+          <div class="flex w-full h-[500px]">
+            <img src="./images/thap1.jpg" alt="Card Image" class="w-3/5" />
             <div class="px-6 py-4 w-1/2">
-                <div class="font-bold font-sans text-xl mb-2 text-center">THAPAR PMS</div>
-                <br>
-        
-                <p class="text-gray-700 text-base text-center">
-                   One Stop Solution For All Your Room Permission and Allocation issues 
-                </p>
-                <br>
-                <br>
-                <br>
-                <div class="flex flex-col justify-end px-6 py-4">
-                    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mb-4" id="button1">
-                        Faculty Login
-                    </button>
-                    <button class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded" id="button2">
-                        Society Login
-                    </button>
-                    <div class="hidden" id="login-form">
-                        <input type="email" class="bg-gray-200 border border-gray-400 rounded-lg p-2 mb-2" placeholder="Email">
-                        <input type="password" class="bg-gray-200 border border-gray-400 rounded-lg p-2 mb-2" placeholder="Password">
-                        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Submit</button>
-                        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mr-2" id="back-btn">Back</button>
-                    </div>
-                <br>
-                <br>
-                <br>
-                <br>
+              <div class="flex flex-col items-center mt-6">
+                <img src="./images/thap2.png" class="w-[150px]" alt="logo" />
+              </div>
+              <br />
 
-                <div class=" p-4 text-center font-sans text-xl uppercase " id="tiet">Thapar University</div>
-</div>
+              <p class="text-gray-700 text-base text-center">
+                One Stop Solution For All Your Room Permission and Allocation
+                issues
+              </p>
+              <br />
+              <br />
+              <p class="text-red-500 text-center text-sm font-bold"> <%=message%></p>
+              <div class="flex flex-col justify-end px-6 py-4">
+                <button
+                  class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mb-4"
+                  id="button1"
+                >
+                  Faculty Login
+                </button>
+                <button
+                  class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded"
+                  id="button2"
+                >
+                  Society Login
+                </button>
+                <form method="post" action="/login">
+                  <div class="hidden" id="login-form">
+                    <input
+                      type="email"
+                      name="email"
+                      class="bg-gray-200 border border-gray-400 rounded-lg p-2 mb-2"
+                      placeholder="Email"
+                    />
+                    <input
+                      type="password"
+                      name="password"
+                      class="bg-gray-200 border border-gray-400 rounded-lg p-2 mb-2"
+                      placeholder="Password"
+                    />
+                    <button
+                      class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+                    >
+                      Submit
+                    </button>
+                    <button
+                      class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mr-2"
+                      id="back-btn"
+                    >
+                      Back
+                    </button>
+                  </div>
+                </form>
+                <br />
+                <br />
+                <br />
+                <br />
+
+                <div
+                  class="p-4 text-center font-sans text-xl uppercase font-bold"
+                  id="tiet"
+                >
+                  Thapar University
+                </div>
+              </div>
             </div>
+          </div>
         </div>
-    </div>
-</div>
-
+      </div>
     </div>
     <script src="./js/script.js"></script>
-</body>
 
+  </body>
 </html>
