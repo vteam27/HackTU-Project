@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Appointment App | theuicode.com</title>
+    <title>TPMS booking</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css"
         integrity="sha512-wnea99uKIC3TJF7v4eKk4Y+lMz2Mklv18+r4na2Gn1abDRPPOeef95xTzdwGD9e6zXJBteMIhZ1+68QC5byJZw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -14,6 +14,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon-16x16.png">
     <link rel="manifest" href="./images/site.webmanifest">
+    <link rel="stylesheet" href="./css/teacher.css">
 </head>
 
 <body class="bg-gray-200 flex justify-center items-center h-screen w-screen">
@@ -51,7 +52,8 @@
          
 
         </div>
-        <div class="flex flex-col app-bg-white-1 px-12 pb-10">
+        <!-- width: 30% -->
+        <div class="flex flex-col app-bg-white-1 px-12 pb-10" class="col">
             <br />
             <div class="flex flex-row w-full">
                 <div class="flex flex-col pl-5 py-3 mr-3 rounded-tl-2xl rounded-tr-2xl bg-white active w-1/4 h-[300px] ">
@@ -90,7 +92,7 @@
                                 <p class="font-semibold py-2">Capacity of the class:</p>
                                 <input type="radio" id="hundred" name="time" value="hundred">
                                 <label for="hundred" class="gap-2"> 100 </label><br>
-                                <input type="radio" id="twenty" name="time" value="three">
+                                <input type="radio" id="threehundred" name="time" value="three">
                                 <label for="three" class="three">300</label><br>
                               </form>
                            
@@ -105,9 +107,9 @@
                     </div>
                 
             </div>
-
-            <form method="post" action="/confirmation">
-            <div class=" hidden flex-row bg-white p-10 relative " id="clickk">
+            <!-- width: 100- -->
+            <form method="post" action="/confirmation" class="form">
+            <div class=" hidden flex-row bg-white p-10 relative" id="clickk">
                 <div class="absolute app-bg-yellow-3 text-xs font-semibold px-3 py-0.5 rounded-br-md rounded-tl-md text-white"
                     style="top: 76px;">Best Choice</div>
                 <table class="w-full">
@@ -115,16 +117,16 @@
                         <tr>
                             <th></th>
                             <th></th>
-                            <th class="text-left text-xs app-color-black pb-5">CLASSROOM</th>
+                            <th class="text-left text-xs app-color-black pb-5 -space-x-8">CLASSROOM</th>
                            
-                            <th class="text-left text-xs app-color-black pb-5">TIMING</th>
-                            <th class="text-left text-xs app-color-black pb-5">DURATION</th>
+                            <th class="text-left text-xs app-color-black pb-5 px-3">TIMING</th>
+                            <th class="text-left text-xs app-color-black pb-5 px-3">DURATION</th>
                             <th></th>
                             <th></th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr class="app-border-1">
+                        <tr class=" app-border-1" id="app-bord-1">
                             <td>
                                 <svg class="w-6 h-6 app-color-blue-3 ml-3" fill="none" stroke="currentColor"
                                     viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -139,10 +141,10 @@
                             </td>
                             <td>
                                 <div class="flex flex-row py-3">
-                                    <div class="mr-5 w-10 h-10 bg-gray-100 rounded-full"></div>
+                                    
                                     <div class="flex flex-col">
                                         <span class="font-semibold text-sm app-color-black">LT 101</span>
-                                        <span class="font-semibold text-xs app-color-gray-1">CAP-300</span>
+                                        <span class="font-semibold text-xs app-color-gray-1">CAP-100</span>
                                     </div>
                                 </div>
                             </td>
@@ -178,7 +180,7 @@
 
                             </td>
                         </tr>
-                        <tr class="app-border-1">
+                        <tr class=" app-border-1" id="app-bord-2">
                             <td class="w-6 h-6">
                                 <svg class="ml-3 w-6 h-6 app-color-blue-3 mr-6" fill="none" stroke="currentColor"
                                     viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -193,16 +195,16 @@
                             </td>
                             <td>
                                 <div class="flex flex-row items-center py-3">
-                                    <div class="w-10 h-10 bg-yellow-50 rounded-full mr-5"></div>
+                               
                                     <div class="flex flex-col">
                                         <span class="font-semibold text-sm app-color-black">LP 107</span>
-                                        <span class="font-semibold text-xs app-color-gray-1">CAP-150</span>
+                                        <span class="font-semibold text-xs app-color-gray-1">CAP-100</span>
                                     </div>
                                 </div>
                             </td>
                            
                             <td>
-                                <span class="font-semibold text-sm app-color-gray-1">3:20 PM</span>
+                                <span class="font-semibold text-sm app-color-gray-1">03:20 PM</span>
                             </td>
                             <td>
                                 <div
@@ -231,7 +233,7 @@
                                 </svg>
                             </td>
                         </tr>
-                        <tr class="app-border-1">
+                        <tr class=" hidden app-border-1" id="app-bord-3">
                             <td class="w-6 h-6">
                                 <svg class="ml-3 w-6 h-6 app-color-blue-3 mr-6" fill="none" stroke="currentColor"
                                     viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -246,21 +248,21 @@
                             </td>
                             <td>
                                 <div class="flex flex-row items-center py-3">
-                                    <div class="w-10 h-10 bg-green-100 rounded-full mr-5"></div>
+                                
                                     <div class="flex flex-col">
                                         <span class="font-semibold text-sm app-color-black">TAN 103</span>
-                                        <span class="font-semibold text-xs app-color-gray-1">CAP-100</span>
+                                        <span class="font-semibold text-xs app-color-gray-1">CAP-300</span>
                                     </div>
                                 </div>
                             </td>
                            
                             <td>
-                                <span class="font-semibold text-sm app-color-gray-1">4:20PM</span>
+                                <span class="font-semibold text-sm app-color-gray-1">04:20PM</span>
                             </td>
                             <td>
                                 <div
                                     class="h-8 w-28 font-semibold text-sm app-bg-blue-2 flex items-center justify-center app-color-blue-1 rounded-md">
-                                  1 HOUR
+                                  1 HR 40 MINS
                                 </div>
                             </td>
                             <td>
@@ -282,7 +284,7 @@
                                 </svg>
                             </td>
                         </tr>
-                        <tr class="app-border-1">
+                        <tr class="hidden app-border-1" id="app-bord-4">
                             <td class="w-6 h-6">
                                 <svg class="ml-3 w-6 h-6 app-color-blue-3 mr-6" fill="none" stroke="currentColor"
                                     viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -297,7 +299,7 @@
                             </td>
                             <td>
                                 <div class="flex flex-row items-center py-3">
-                                    <div class="w-10 h-10 bg-pink-100 rounded-full mr-5"></div>
+                                   
                                     <div class="flex flex-col">
                                         <span class="font-semibold text-sm app-color-black">LT-102</span>
                                         <span class="font-semibold text-xs app-color-gray-1">CAP-300</span>
@@ -311,7 +313,7 @@
                             <td>
                                 <div
                                     class="h-8 w-28 font-semibold text-sm app-bg-blue-2 flex items-center justify-center app-color-blue-1 rounded-md">
-                                 1 HOUR
+                                 1 HR 40 MINS
                                 </div>
                             </td>
                             <td>
