@@ -16,6 +16,12 @@ const userSchema = new mongoose.Schema({
     department: String,
 });
 
+// const classSchema= new mongoose.Schema({
+//   location: String,
+//   capacity: Number,
+// });
+// const Class=new mongoose.model("Class", classSchema);
+
 const User = new mongoose.model("User", userSchema);
 
 app.set('views', path.join(__dirname, 'views'));
@@ -37,17 +43,13 @@ app.get('/confirmation', (req, res)=>{
     res.render('confirmation')
 })
 
+app.post('/confirmation', (req, res)=>{
+  res.render('confirmation')
+})
+
 app.post("/", function(req, res) {
     console.log("You are in app.post()");
-    res.sendFile(__dirname + "/login.html")
-});
-
-app.get("/login", (req, res)=>{
-res.render("teacher",{name: "Vaibhav", department: "DOSA"});
-});
-app.post("/login",(req, res)=>
-{
-email=req.body.email;
+    email=req.body.email;
 password=req.body.password;
 console.log(email, password);
 
@@ -57,8 +59,10 @@ User.findOne({ email: email }, (err, document) => {
       res.send("An error occurred.");
     } else if (document) {
       console.log(document);
-      if(password==document["password"])
-      res.render("teacher", {name:document["name"],department:document["department"]});
+      if(document["department"]=="society" && password==document["password"])
+      res.redirect(`/society?name=${document["name"]}&department=${document["department"]}`);
+      else if(password==document["password"])
+      res.redirect(`/teacher?name=${document["name"]}&department=${document["department"]}`);
       else
       res.render("index", {message: "Enter correct Password"});
     } else {
@@ -66,4 +70,26 @@ User.findOne({ email: email }, (err, document) => {
       res.render("index", {message: "Email not found"});
     }
   });
+});
+
+app.get("/teacher", (req, res)=>{
+  res.render("teacher",{
+    name: req.query.name,
+    department: req.query.department
+});
+});
+app.post("/teacher",(req, res)=>
+{
+
+});
+
+app.get("/society", (req, res)=>{
+  res.render("society",{
+    name: req.query.name,
+    department: req.query.department
+});
+});
+app.post("/society",(req, res)=>
+{
+
 });
