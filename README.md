@@ -1,4 +1,6 @@
 # Thapar Permission Management System (TPMS)
+![thap2](https://user-images.githubusercontent.com/94956831/216806466-8e8bdc66-6203-45d8-aca7-49214e42673b.png)
+
 A College Room Permission Management System can be used by colleges or universities to streamline the process of booking rooms for events or classes. It helps in simplifying the process of requesting and granting permission to use a room, and also keeps track of the room usage in a centralized system. It makes the existing task easier and more efficient by reducing manual efforts and minimizing the chances of errors. Additionally, it provides a secure and organized platform for managing room usage and ensures that the rooms are being used as per the specified guidelines. This system can also help in better utilization of resources by keeping a record of room usage and availability, and avoiding overbooking or underutilization of rooms. It can also be used by societies to conduct event and activities bypassing need to manually get permission from the administration.
 ## Preview
 Video Demo: https://www.youtube.com/watch?v=hxqZhzWbfUQ
